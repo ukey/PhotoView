@@ -7,9 +7,9 @@
         <!--Group List View Controller - List-->
         <scene sceneID="awC-ie-ETw">
             <objects>
-                <tableViewController id="y0L-qM-LFd" customClass="GroupListViewController" sceneMemberID="viewController">
+                <tableViewController wantsFullScreenLayout="YES" id="y0L-qM-LFd" customClass="GroupListViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wbr-Bq-SUf">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -47,9 +47,9 @@
         <!--View Controller - Detail-->
         <scene sceneID="5">
             <objects>
-                <viewController id="2" customClass="ViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="2" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -62,8 +62,9 @@
         <!--Navigation Controller-->
         <scene sceneID="c0v-9B-ZEr">
             <objects>
-                <navigationController id="sXg-LX-c9D" sceneMemberID="viewController">
+                <navigationController wantsFullScreenLayout="YES" id="sXg-LX-c9D" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackOpaque"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="GaB-3I-Dvy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
