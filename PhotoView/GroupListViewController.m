@@ -50,29 +50,29 @@
     }
     
     dispatch_async(dispatch_get_main_queue(), ^
-                   {
-                       void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop)
-                       {
-                           if (group)
-                           {
-                               [self.groups addObject:group];
-                           }
-                           else
-                           {
-                               [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
-                           }
-                       };
-                       
-                       void (^assetGroupEnumberatorFailure)(NSError *) = ^(NSError *error)
-                       {
-                           UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"Album Error: %@ - %@", [error localizedDescription], [error localizedRecoverySuggestion]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
-                           [alert show];
-                           
-                           NSLog(@"assetGroupEnumberatorFailure %@", [error description]);
-                       };
-                       
-                       [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:assetGroupEnumerator failureBlock:assetGroupEnumberatorFailure];
-                   });
+    {
+        void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop)
+        {
+            if (group)
+            {
+                [self.groups addObject:group];
+            }
+            else
+            {
+                [self.tableView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+            }
+        };
+        
+        void (^assetGroupEnumberatorFailure)(NSError *) = ^(NSError *error)
+        {
+            UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"Album Error: %@ - %@", [error localizedDescription], [error localizedRecoverySuggestion]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+            [alert show];
+            
+            NSLog(@"assetGroupEnumberatorFailure %@", [error description]);
+        };
+        
+        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:assetGroupEnumerator failureBlock:assetGroupEnumberatorFailure];
+    });
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
