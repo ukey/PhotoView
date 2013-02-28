@@ -18,6 +18,8 @@
 		4973C3E316DFB0D700B766E2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4973C3E216DFB0D700B766E2 /* Default-568h@2x.png */; };
 		4973C3E616DFB0D700B766E2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4973C3E416DFB0D700B766E2 /* MainStoryboard.storyboard */; };
 		4973C3E916DFB0D700B766E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973C3E816DFB0D700B766E2 /* ViewController.m */; };
+		4973C3F016DFB20E00B766E2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3EF16DFB20E00B766E2 /* AssetsLibrary.framework */; };
+		4973C3F616DFB2DC00B766E2 /* GroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		4973C3E516DFB0D700B766E2 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		4973C3E716DFB0D700B766E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4973C3E816DFB0D700B766E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4973C3EF16DFB20E00B766E2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		4973C3F416DFB2DC00B766E2 /* GroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListViewController.h; sourceTree = "<group>"; };
+		4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4973C3F016DFB20E00B766E2 /* AssetsLibrary.framework in Frameworks */,
 				4973C3CD16DFB0D700B766E2 /* UIKit.framework in Frameworks */,
 				4973C3CF16DFB0D700B766E2 /* Foundation.framework in Frameworks */,
 				4973C3D116DFB0D700B766E2 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +79,7 @@
 		4973C3CB16DFB0D700B766E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4973C3EF16DFB20E00B766E2 /* AssetsLibrary.framework */,
 				4973C3CC16DFB0D700B766E2 /* UIKit.framework */,
 				4973C3CE16DFB0D700B766E2 /* Foundation.framework */,
 				4973C3D016DFB0D700B766E2 /* CoreGraphics.framework */,
@@ -85,6 +92,8 @@
 			children = (
 				4973C3DB16DFB0D700B766E2 /* AppDelegate.h */,
 				4973C3DC16DFB0D700B766E2 /* AppDelegate.m */,
+				4973C3F416DFB2DC00B766E2 /* GroupListViewController.h */,
+				4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */,
 				4973C3E416DFB0D700B766E2 /* MainStoryboard.storyboard */,
 				4973C3E716DFB0D700B766E2 /* ViewController.h */,
 				4973C3E816DFB0D700B766E2 /* ViewController.m */,
@@ -176,6 +185,7 @@
 				4973C3D916DFB0D700B766E2 /* main.m in Sources */,
 				4973C3DD16DFB0D700B766E2 /* AppDelegate.m in Sources */,
 				4973C3E916DFB0D700B766E2 /* ViewController.m in Sources */,
+				4973C3F616DFB2DC00B766E2 /* GroupListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

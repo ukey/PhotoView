@@ -2,8 +2,8 @@
 //  ViewController.m
 //  PhotoView
 //
-//  Created by ukey on 2013/03/01.
-//  Copyright (c) 2013年 Yuki Sato. All rights reserved.
+//  Created by Yuki Sato on 2013/02/27.
+//  Copyright (c) 2013 Yuki Sato. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -14,16 +14,29 @@
 
 @implementation ViewController
 
+#pragma mark -
+#pragma mark View lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    [self.navigationItem setTitle:[self.group valueForProperty:ALAssetsGroupPropertyName]];
 }
+
+#pragma mark -
+#pragma mark Memory management
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload
+{
+    self.group = nil;
+    
+    [super viewDidUnload];
 }
 
 @end

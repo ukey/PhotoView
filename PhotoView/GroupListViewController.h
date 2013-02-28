@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  GroupListViewController.h
 //  PhotoView
 //
 //  Created by Yuki Sato on 2013/02/27.
@@ -9,8 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface ViewController : UIViewController
-
-@property (nonatomic, strong) ALAssetsGroup *group;
+@interface GroupListViewController : UITableViewController
 
 @end
