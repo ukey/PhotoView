@@ -34,7 +34,6 @@
     
     [self.navigationItem setTitle:@"アルバム"];
     
-    self.assetsLibrary = [[ALAssetsLibrary alloc] init];
     if (!self.assetsLibrary)
     {
         self.assetsLibrary = [[ALAssetsLibrary alloc] init];
