@@ -11,6 +11,4 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, strong) ALAssetsGroup *group;
-
 @end

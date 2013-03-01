@@ -2,8 +2,8 @@
 //  main.m
 //  PhotoView
 //
-//  Created by ukey on 2013/03/01.
-//  Copyright (c) 2013年 Yuki Sato. All rights reserved.
+//  Created by Yuki Sato on 2013/03/01.
+//  Copyright (c) 2013 Yuki Sato. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

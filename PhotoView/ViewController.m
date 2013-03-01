@@ -20,8 +20,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [self.navigationItem setTitle:[self.group valueForProperty:ALAssetsGroupPropertyName]];
 }
 
 #pragma mark -
@@ -30,13 +28,6 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-}
-
-- (void)viewDidUnload
-{
-    self.group = nil;
-    
-    [super viewDidUnload];
 }
 
 @end

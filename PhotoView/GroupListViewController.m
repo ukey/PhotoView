@@ -7,7 +7,7 @@
 //
 
 #import "GroupListViewController.h"
-#import "ViewController.h"
+#import "PhotoListViewController.h"
 
 @interface GroupListViewController ()
 
@@ -25,6 +25,10 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
+    if (self)
+    {
+        // Custom initialization
+    }
     return self;
 }
 
@@ -50,7 +54,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^
     {
-        void (^assetGroupEnumerator)(ALAssetsGroup *, BOOL *) = ^(ALAssetsGroup *group, BOOL *stop)
+        ALAssetsLibraryGroupsEnumerationResultsBlock groupsEnumerationResultsBlock = ^(ALAssetsGroup *group, BOOL *stop)
         {
             if (group)
             {
@@ -62,15 +66,15 @@
             }
         };
         
-        void (^assetGroupEnumberatorFailure)(NSError *) = ^(NSError *error)
+        ALAssetsLibraryAccessFailureBlock accessFailureBlock = ^(NSError *error)
         {
             UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithFormat:@"Album Error: %@ - %@", [error localizedDescription], [error localizedRecoverySuggestion]] delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
             [alert show];
             
-            NSLog(@"assetGroupEnumberatorFailure %@", [error description]);
+            NSLog(@"assetGroupEnumerationFailure %@", [error description]);
         };
         
-        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:assetGroupEnumerator failureBlock:assetGroupEnumberatorFailure];
+        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAll usingBlock:groupsEnumerationResultsBlock failureBlock:accessFailureBlock];
     });
 }
 
@@ -78,8 +82,8 @@
 {
     if ([[segue identifier] isEqualToString:@"photoList"])
     {
-        ViewController *viewController = [segue destinationViewController];
-        viewController.group = [self.groups objectAtIndex:self.selectedIndexPath.row];
+        PhotoListViewController *photoListviewController = [segue destinationViewController];
+        photoListviewController.group = [self.groups objectAtIndex:self.selectedIndexPath.row];
     }
 }
 
@@ -109,7 +113,7 @@
     ALAssetsGroup *group = [self.groups objectAtIndex:indexPath.row];
     [group setAssetsFilter:[ALAssetsFilter allPhotos]];
     
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d)",[group valueForProperty:ALAssetsGroupPropertyName], [group numberOfAssets]];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ (%d)", [group valueForProperty:ALAssetsGroupPropertyName], [group numberOfAssets]];
     [cell.imageView setImage:[UIImage imageWithCGImage:[group posterImage]]];
     [cell setAccessoryType:UITableViewCellAccessoryDisclosureIndicator];
     
@@ -139,14 +143,14 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    self.assetsLibrary = nil;
+    self.groups = nil;
+    self.selectedIndexPath = nil;
 }
 
 - (void)viewDidUnload
 {
-    self.assetsLibrary = nil;
-    self.groups = nil;
-    self.selectedIndexPath = nil;
-    
     [super viewDidUnload];
 }
 
