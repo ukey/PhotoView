@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--Group List View Controller-->
+        <!--Albums View Controller-->
         <scene sceneID="awC-ie-ETw">
             <objects>
-                <tableViewController wantsFullScreenLayout="YES" id="y0L-qM-LFd" customClass="GroupListViewController" sceneMemberID="viewController">
+                <tableViewController wantsFullScreenLayout="YES" id="y0L-qM-LFd" customClass="AlbumsViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="Wbr-Bq-SUf">
                         <rect key="frame" x="0.0" y="20" width="320" height="499"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -259,11 +259,11 @@
         <image name="83-calendar.png" width="23" height="25"/>
     </resources>
     <classes>
+        <class className="AlbumsViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlbumsViewController.h"/>
+        </class>
         <class className="EventsViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/EventsViewController.h"/>
-        </class>
-        <class className="GroupListViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/GroupListViewController.h"/>
         </class>
         <class className="PhotoListViewController" superclassName="UICollectionViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/PhotoListViewController.h"/>
@@ -296,6 +296,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="1x7-9G-O74"/>
+        <segue reference="4Mk-5G-vpY"/>
     </inferredMetricsTieBreakers>
 </document>

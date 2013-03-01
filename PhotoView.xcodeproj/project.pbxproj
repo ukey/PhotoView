@@ -26,7 +26,7 @@
 		4973C3E616DFB0D700B766E2 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4973C3E416DFB0D700B766E2 /* MainStoryboard.storyboard */; };
 		4973C3E916DFB0D700B766E2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973C3E816DFB0D700B766E2 /* ViewController.m */; };
 		4973C3F016DFB20E00B766E2 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3EF16DFB20E00B766E2 /* AssetsLibrary.framework */; };
-		4973C3F616DFB2DC00B766E2 /* GroupListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */; };
+		4973C3F616DFB2DC00B766E2 /* AlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4973C3F516DFB2DC00B766E2 /* AlbumsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,8 +58,8 @@
 		4973C3E716DFB0D700B766E2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4973C3E816DFB0D700B766E2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4973C3EF16DFB20E00B766E2 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
-		4973C3F416DFB2DC00B766E2 /* GroupListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupListViewController.h; sourceTree = "<group>"; };
-		4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupListViewController.m; sourceTree = "<group>"; };
+		4973C3F416DFB2DC00B766E2 /* AlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumsViewController.h; sourceTree = "<group>"; };
+		4973C3F516DFB2DC00B766E2 /* AlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,17 +121,17 @@
 			children = (
 				4973C3DB16DFB0D700B766E2 /* AppDelegate.h */,
 				4973C3DC16DFB0D700B766E2 /* AppDelegate.m */,
-				491F776516E126580014AC04 /* EventsViewController.h */,
-				491F776616E126580014AC04 /* EventsViewController.m */,
-				4973C3F416DFB2DC00B766E2 /* GroupListViewController.h */,
-				4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */,
 				4973C3E416DFB0D700B766E2 /* MainStoryboard.storyboard */,
-				491F775F16E0F7D10014AC04 /* PhotoCollectionViewCell.h */,
-				491F776016E0F7D10014AC04 /* PhotoCollectionViewCell.m */,
-				491F775C16E0E9340014AC04 /* PhotoListViewController.h */,
-				491F775D16E0E9340014AC04 /* PhotoListViewController.m */,
+				4973C3F416DFB2DC00B766E2 /* AlbumsViewController.h */,
+				4973C3F516DFB2DC00B766E2 /* AlbumsViewController.m */,
 				491F776216E1207C0014AC04 /* PhotoStreamViewController.h */,
 				491F776316E1207C0014AC04 /* PhotoStreamViewController.m */,
+				491F776516E126580014AC04 /* EventsViewController.h */,
+				491F776616E126580014AC04 /* EventsViewController.m */,
+				491F775C16E0E9340014AC04 /* PhotoListViewController.h */,
+				491F775D16E0E9340014AC04 /* PhotoListViewController.m */,
+				491F775F16E0F7D10014AC04 /* PhotoCollectionViewCell.h */,
+				491F776016E0F7D10014AC04 /* PhotoCollectionViewCell.m */,
 				4973C3E716DFB0D700B766E2 /* ViewController.h */,
 				4973C3E816DFB0D700B766E2 /* ViewController.m */,
 				4973C3D316DFB0D700B766E2 /* Supporting Files */,
@@ -225,7 +225,7 @@
 				4973C3D916DFB0D700B766E2 /* main.m in Sources */,
 				4973C3DD16DFB0D700B766E2 /* AppDelegate.m in Sources */,
 				4973C3E916DFB0D700B766E2 /* ViewController.m in Sources */,
-				4973C3F616DFB2DC00B766E2 /* GroupListViewController.m in Sources */,
+				4973C3F616DFB2DC00B766E2 /* AlbumsViewController.m in Sources */,
 				491F775E16E0E9340014AC04 /* PhotoListViewController.m in Sources */,
 				491F776116E0F7D20014AC04 /* PhotoCollectionViewCell.m in Sources */,
 				491F776416E1207C0014AC04 /* PhotoStreamViewController.m in Sources */,

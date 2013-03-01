@@ -1,15 +1,15 @@
 //
-//  GroupListViewController.m
+//  AlbumsViewController.m
 //  PhotoView
 //
 //  Created by Yuki Sato on 2013/02/27.
 //  Copyright (c) 2013 Yuki Sato. All rights reserved.
 //
 
-#import "GroupListViewController.h"
+#import "AlbumsViewController.h"
 #import "PhotoListViewController.h"
 
-@interface GroupListViewController ()
+@interface AlbumsViewController ()
 
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, strong) NSMutableArray *groups;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation GroupListViewController
+@implementation AlbumsViewController
 
 #pragma mark -
 #pragma mark View lifecycle

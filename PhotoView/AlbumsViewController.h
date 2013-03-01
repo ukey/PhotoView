@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 
-@interface GroupListViewController : UITableViewController
+@interface AlbumsViewController : UITableViewController
 
 @end
