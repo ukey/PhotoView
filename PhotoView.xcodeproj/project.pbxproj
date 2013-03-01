@@ -11,6 +11,9 @@
 		491F776116E0F7D20014AC04 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F776016E0F7D10014AC04 /* PhotoCollectionViewCell.m */; };
 		491F776416E1207C0014AC04 /* PhotoStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F776316E1207C0014AC04 /* PhotoStreamViewController.m */; };
 		491F776716E126580014AC04 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F776616E126580014AC04 /* EventsViewController.m */; };
+		491F776916E130140014AC04 /* 83-calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 491F776816E130140014AC04 /* 83-calendar.png */; };
+		491F777016E133F50014AC04 /* 56-cloud.png in Resources */ = {isa = PBXBuildFile; fileRef = 491F776F16E133F50014AC04 /* 56-cloud.png */; };
+		491F777216E134A90014AC04 /* 42-photos.png in Resources */ = {isa = PBXBuildFile; fileRef = 491F777116E134A90014AC04 /* 42-photos.png */; };
 		4973C3CD16DFB0D700B766E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3CC16DFB0D700B766E2 /* UIKit.framework */; };
 		4973C3CF16DFB0D700B766E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3CE16DFB0D700B766E2 /* Foundation.framework */; };
 		4973C3D116DFB0D700B766E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3D016DFB0D700B766E2 /* CoreGraphics.framework */; };
@@ -35,6 +38,9 @@
 		491F776316E1207C0014AC04 /* PhotoStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoStreamViewController.m; sourceTree = "<group>"; };
 		491F776516E126580014AC04 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
 		491F776616E126580014AC04 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
+		491F776816E130140014AC04 /* 83-calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "83-calendar.png"; path = "PhotoView/83-calendar.png"; sourceTree = "<group>"; };
+		491F776F16E133F50014AC04 /* 56-cloud.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "56-cloud.png"; sourceTree = "<group>"; };
+		491F777116E134A90014AC04 /* 42-photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-photos.png"; sourceTree = "<group>"; };
 		4973C3C916DFB0D700B766E2 /* PhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4973C3CC16DFB0D700B766E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4973C3CE16DFB0D700B766E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -71,9 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		491F776A16E130520014AC04 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				491F777116E134A90014AC04 /* 42-photos.png */,
+				491F776F16E133F50014AC04 /* 56-cloud.png */,
+				491F776816E130140014AC04 /* 83-calendar.png */,
+			);
+			name = Image;
+			sourceTree = "<group>";
+		};
 		4973C3C016DFB0D600B766E2 = {
 			isa = PBXGroup;
 			children = (
+				491F776A16E130520014AC04 /* Image */,
 				4973C3D216DFB0D700B766E2 /* PhotoView */,
 				4973C3CB16DFB0D700B766E2 /* Frameworks */,
 				4973C3CA16DFB0D700B766E2 /* Products */,
@@ -192,6 +209,9 @@
 				4973C3E116DFB0D700B766E2 /* Default@2x.png in Resources */,
 				4973C3E316DFB0D700B766E2 /* Default-568h@2x.png in Resources */,
 				4973C3E616DFB0D700B766E2 /* MainStoryboard.storyboard in Resources */,
+				491F776916E130140014AC04 /* 83-calendar.png in Resources */,
+				491F777016E133F50014AC04 /* 56-cloud.png in Resources */,
+				491F777216E134A90014AC04 /* 42-photos.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
