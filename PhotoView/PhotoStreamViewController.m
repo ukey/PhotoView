@@ -1,15 +1,15 @@
 //
-//  GroupListViewController.m
+//  PhotoStreamViewController.m
 //  PhotoView
 //
-//  Created by Yuki Sato on 2013/02/27.
+//  Created by Yuki Sato on 2013/03/02.
 //  Copyright (c) 2013 Yuki Sato. All rights reserved.
 //
 
-#import "GroupListViewController.h"
+#import "PhotoStreamViewController.h"
 #import "PhotoListViewController.h"
 
-@interface GroupListViewController ()
+@interface PhotoStreamViewController ()
 
 @property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, strong) NSMutableArray *groups;
@@ -17,7 +17,7 @@
 
 @end
 
-@implementation GroupListViewController
+@implementation PhotoStreamViewController
 
 #pragma mark -
 #pragma mark View lifecycle
@@ -36,7 +36,7 @@
 {
     [super viewDidLoad];
     
-    [self.navigationItem setTitle:@"Albums"];
+    [self.navigationItem setTitle:@"Photo Stream"];
     
     if (!self.assetsLibrary)
     {
@@ -54,15 +54,7 @@
     
     dispatch_async(dispatch_get_main_queue(), ^
     {
-        ALAssetsLibraryGroupsEnumerationResultsBlock cameraRollEnumerationResultsBlock = ^(ALAssetsGroup *group, BOOL *stop)
-        {
-            if (group)
-            {
-                [self.groups addObject:group];
-            }
-        };
-        
-        ALAssetsLibraryGroupsEnumerationResultsBlock albumsEnumerationResultsBlock = ^(ALAssetsGroup *group, BOOL *stop)
+        ALAssetsLibraryGroupsEnumerationResultsBlock photoStreamEnumerationResultsBlock = ^(ALAssetsGroup *group, BOOL *stop)
         {
             if (group)
             {
@@ -82,14 +74,13 @@
             NSLog(@"AssetsLibraryAccessFailure %@", [error description]);
         };
         
-        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupSavedPhotos usingBlock:cameraRollEnumerationResultsBlock failureBlock:accessFailureBlock];
-        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupAlbum usingBlock:albumsEnumerationResultsBlock failureBlock:accessFailureBlock];
+        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupPhotoStream usingBlock:photoStreamEnumerationResultsBlock failureBlock:accessFailureBlock];
     });
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"fromAlbums"])
+    if ([[segue identifier] isEqualToString:@"fromPhotoStream"])
     {
         PhotoListViewController *photoListviewController = [segue destinationViewController];
         photoListviewController.group = [self.groups objectAtIndex:self.selectedIndexPath.row];
@@ -137,7 +128,7 @@
     if (self.groups.count > indexPath.row)
     {
         self.selectedIndexPath = indexPath;
-        [self performSegueWithIdentifier:@"fromAlbums" sender:self];
+        [self performSegueWithIdentifier:@"fromPhotoStream" sender:self];
     }
 }
 

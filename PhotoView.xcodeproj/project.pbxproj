@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		491F775E16E0E9340014AC04 /* PhotoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F775D16E0E9340014AC04 /* PhotoListViewController.m */; };
 		491F776116E0F7D20014AC04 /* PhotoCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F776016E0F7D10014AC04 /* PhotoCollectionViewCell.m */; };
+		491F776416E1207C0014AC04 /* PhotoStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F776316E1207C0014AC04 /* PhotoStreamViewController.m */; };
+		491F776716E126580014AC04 /* EventsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 491F776616E126580014AC04 /* EventsViewController.m */; };
 		4973C3CD16DFB0D700B766E2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3CC16DFB0D700B766E2 /* UIKit.framework */; };
 		4973C3CF16DFB0D700B766E2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3CE16DFB0D700B766E2 /* Foundation.framework */; };
 		4973C3D116DFB0D700B766E2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4973C3D016DFB0D700B766E2 /* CoreGraphics.framework */; };
@@ -29,6 +31,10 @@
 		491F775D16E0E9340014AC04 /* PhotoListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoListViewController.m; sourceTree = "<group>"; };
 		491F775F16E0F7D10014AC04 /* PhotoCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoCollectionViewCell.h; sourceTree = "<group>"; };
 		491F776016E0F7D10014AC04 /* PhotoCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoCollectionViewCell.m; sourceTree = "<group>"; };
+		491F776216E1207C0014AC04 /* PhotoStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhotoStreamViewController.h; sourceTree = "<group>"; };
+		491F776316E1207C0014AC04 /* PhotoStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhotoStreamViewController.m; sourceTree = "<group>"; };
+		491F776516E126580014AC04 /* EventsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventsViewController.h; sourceTree = "<group>"; };
+		491F776616E126580014AC04 /* EventsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsViewController.m; sourceTree = "<group>"; };
 		4973C3C916DFB0D700B766E2 /* PhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4973C3CC16DFB0D700B766E2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4973C3CE16DFB0D700B766E2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -98,6 +104,8 @@
 			children = (
 				4973C3DB16DFB0D700B766E2 /* AppDelegate.h */,
 				4973C3DC16DFB0D700B766E2 /* AppDelegate.m */,
+				491F776516E126580014AC04 /* EventsViewController.h */,
+				491F776616E126580014AC04 /* EventsViewController.m */,
 				4973C3F416DFB2DC00B766E2 /* GroupListViewController.h */,
 				4973C3F516DFB2DC00B766E2 /* GroupListViewController.m */,
 				4973C3E416DFB0D700B766E2 /* MainStoryboard.storyboard */,
@@ -105,6 +113,8 @@
 				491F776016E0F7D10014AC04 /* PhotoCollectionViewCell.m */,
 				491F775C16E0E9340014AC04 /* PhotoListViewController.h */,
 				491F775D16E0E9340014AC04 /* PhotoListViewController.m */,
+				491F776216E1207C0014AC04 /* PhotoStreamViewController.h */,
+				491F776316E1207C0014AC04 /* PhotoStreamViewController.m */,
 				4973C3E716DFB0D700B766E2 /* ViewController.h */,
 				4973C3E816DFB0D700B766E2 /* ViewController.m */,
 				4973C3D316DFB0D700B766E2 /* Supporting Files */,
@@ -198,6 +208,8 @@
 				4973C3F616DFB2DC00B766E2 /* GroupListViewController.m in Sources */,
 				491F775E16E0E9340014AC04 /* PhotoListViewController.m in Sources */,
 				491F776116E0F7D20014AC04 /* PhotoCollectionViewCell.m in Sources */,
+				491F776416E1207C0014AC04 /* PhotoStreamViewController.m in Sources */,
+				491F776716E126580014AC04 /* EventsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
