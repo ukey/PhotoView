@@ -84,7 +84,7 @@
         <scene sceneID="eS2-LF-WKM">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" definesPresentationContext="YES" id="Ycg-o8-Xfv" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Photo Stream" image="56-cloud.png" id="XtX-YJ-ko0"/>
+                    <tabBarItem key="tabBarItem" title="Photo Stream" image="cloud.png" id="XtX-YJ-ko0"/>
                     <navigationItem key="navigationItem" id="oG5-kE-x4I"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="bsN-22-en1">
@@ -196,7 +196,7 @@
         <scene sceneID="c0v-9B-ZEr">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" id="sXg-LX-c9D" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Albums" image="42-photos.png" id="mDM-Za-wjW"/>
+                    <tabBarItem key="tabBarItem" title="Albums" image="photos.png" id="mDM-Za-wjW"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="GaB-3I-Dvy">
@@ -236,7 +236,7 @@
         <scene sceneID="n1w-NM-r0s">
             <objects>
                 <navigationController wantsFullScreenLayout="YES" id="t9U-2u-hQi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Events" image="83-calendar.png" id="G7C-10-cuY"/>
+                    <tabBarItem key="tabBarItem" title="Events" image="calendar.png" id="G7C-10-cuY"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="rl4-fv-5KO">
@@ -254,9 +254,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="42-photos.png" width="22" height="24"/>
-        <image name="56-cloud.png" width="24" height="16"/>
-        <image name="83-calendar.png" width="23" height="25"/>
+        <image name="calendar.png" width="23" height="25"/>
+        <image name="cloud.png" width="24" height="16"/>
+        <image name="photos.png" width="22" height="24"/>
     </resources>
     <classes>
         <class className="AlbumsViewController" superclassName="UITableViewController">
