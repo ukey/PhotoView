@@ -54,10 +54,19 @@
         {
             if (result)
             {
-                [self.assets addObject:result];
+                [self.assets addObject:@{@0:result, @1:[result valueForProperty:ALAssetPropertyDate]}];
+                //[self.assets addObject:result];
             }
             else
             {
+                [self.assets sortWithOptions:NSSortConcurrent usingComparator:^NSComparisonResult(NSDictionary *a, NSDictionary *b)
+                {
+                    NSDate *datea = a[@1];
+                    NSDate *dateb = b[@1];
+                    
+                    return [datea compare:dateb];
+                }];
+                
                 [self.collectionView performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
             }
         };
@@ -83,9 +92,11 @@
 {    
     PhotoCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"Cell" forIndexPath:indexPath];
     
-    ALAsset *asset = [self.assets objectAtIndex:indexPath.row];
-    cell.imageView.image = [UIImage imageWithCGImage:[asset thumbnail]];
+    NSDictionary *value = [self.assets objectAtIndex:indexPath.row];
+    ALAsset *asset = value[@0];
     
+    cell.imageView.image = [UIImage imageWithCGImage:[asset thumbnail]];
+    NSLog(@"%@", [asset valueForProperty:ALAssetPropertyDate]);
     return cell;
 }
 
