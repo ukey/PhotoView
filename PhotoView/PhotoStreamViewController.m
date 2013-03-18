@@ -8,12 +8,11 @@
 
 #import "PhotoStreamViewController.h"
 #import "PhotoListViewController.h"
+#import "AppDelegate.h"
 
 @interface PhotoStreamViewController ()
 
-@property (nonatomic, strong) ALAssetsLibrary *assetsLibrary;
 @property (nonatomic, strong) NSMutableArray *groups;
-@property (nonatomic, strong) NSIndexPath *selectedIndexPath;
 
 @end
 
@@ -27,7 +26,7 @@
     self = [super initWithStyle:style];
     if (self)
     {
-        // Custom initialization
+        self.groups = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -37,11 +36,11 @@
     [super viewDidLoad];
     
     [self.navigationItem setTitle:@"Photo Stream"];
-    
-    if (!self.assetsLibrary)
-    {
-        self.assetsLibrary = [[ALAssetsLibrary alloc] init];
-    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    AppDelegate *appDelegate = [[UIApplication sharedApplication] delegate];
     
     if (!self.groups)
     {
@@ -74,8 +73,10 @@
             NSLog(@"AssetsLibraryAccessFailure %@", [error description]);
         };
         
-        [self.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupPhotoStream usingBlock:photoStreamEnumerationResultsBlock failureBlock:accessFailureBlock];
+        [appDelegate.assetsLibrary enumerateGroupsWithTypes:ALAssetsGroupPhotoStream usingBlock:photoStreamEnumerationResultsBlock failureBlock:accessFailureBlock];
     });
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -83,7 +84,8 @@
     if ([[segue identifier] isEqualToString:@"fromPhotoStream"])
     {
         PhotoListViewController *photoListviewController = [segue destinationViewController];
-        photoListviewController.group = [self.groups objectAtIndex:self.selectedIndexPath.row];
+        NSIndexPath *indexPath = (NSIndexPath *)sender;
+        photoListviewController.group = [self.groups objectAtIndex:indexPath.row];
     }
 }
 
@@ -127,8 +129,7 @@
 {
     if (self.groups.count > indexPath.row)
     {
-        self.selectedIndexPath = indexPath;
-        [self performSegueWithIdentifier:@"fromPhotoStream" sender:self];
+        [self performSegueWithIdentifier:@"fromPhotoStream" sender:indexPath];
     }
 }
 
@@ -144,14 +145,11 @@
 {
     [super didReceiveMemoryWarning];
     
-    self.assetsLibrary = nil;
-    self.groups = nil;
-    self.selectedIndexPath = nil;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+    if ([self.view window] == nil)
+    {
+        self.groups = nil;
+        self.view = nil;
+    }
 }
 
 @end

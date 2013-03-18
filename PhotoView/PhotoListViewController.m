@@ -25,7 +25,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self)
     {
-        // Custom initialization
+        self.assets = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -35,6 +35,10 @@
     [super viewDidLoad];
     
     [self.collectionView registerClass:[PhotoCollectionViewCell class] forCellWithReuseIdentifier:@"Cell"];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     [self.navigationItem setTitle:[self.group valueForProperty:ALAssetsGroupPropertyName]];
     
     if (!self.assets)
@@ -55,7 +59,6 @@
             if (result)
             {
                 [self.assets addObject:@{@0:result, @1:[result valueForProperty:ALAssetPropertyDate]}];
-                //[self.assets addObject:result];
             }
             else
             {
@@ -73,6 +76,8 @@
         
         [self.group enumerateAssetsUsingBlock:assetsEnumerationBlock];
     });
+    
+    [super viewWillAppear:animated];
 }
 
 #pragma mark -
@@ -107,13 +112,12 @@
 {
     [super didReceiveMemoryWarning];
 
-    self.group = nil;
-    self.assets = nil;
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
+    if ([self.view window] == nil)
+    {
+        self.group = nil;
+        self.assets = nil;
+        self.view = nil;
+    }
 }
 
 @end
